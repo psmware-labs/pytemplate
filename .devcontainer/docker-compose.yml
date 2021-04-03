@@ -1,0 +1,34 @@
+#  SPDX-License-Identifier: AGPL-3.0-only
+
+#  Geras is a time recording application written specifically for
+#  the Alzheimer Society of Ireland
+#  Copyright (C) 2020-2021  Patrick McLean - psmware ltd
+
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+version: '3'
+
+services:
+  poetry:
+    image: poetry
+    container_name: poetry
+    hostname: poetry
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    user: vscode
+    volumes:
+      - ~/.ssh:/home/vscode/.ssh:ro
+      - ~/.gnupg:/home/vscode/.gnupg:cached
+      - ..:/app:cached
+    env_file:
+      - devcontainer.env
+
+    command: sleep infinity
