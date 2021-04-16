@@ -9,6 +9,7 @@ license = "AGPL3-only"
 python = "^3.9"
 psycopg2 = "^2.8.6"
 cryptography = "3.3.2"
+pyfos = "^2.0.1"
 
 
 [tool.poetry.dev-dependencies]

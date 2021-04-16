@@ -3,7 +3,6 @@ LABEL author="Pat McLean" \
       maintainer="Pat McLean<pmclean@vso-inc.com>"
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
-COPY ./.devcontainer/.bashrc /root/
 
 # Setting up user access
 ARG USERNAME=vscode
@@ -42,7 +41,7 @@ COPY ./.devcontainer/.zshrc  /home/$USERNAME/
 RUN echo "===> Installing Python Packages tools... "
 RUN /home/$USERNAME/.poetry/bin/poetry config virtualenvs.create false
 COPY ./pyproject.toml /app/pyproject.toml
-COPY ./poetry.lock /app/poetry.lock
+# COPY ./poetry.lock /app/poetry.lock
 RUN /home/$USERNAME/.poetry/bin/poetry install
 
 # Setting up user access

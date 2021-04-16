@@ -16,10 +16,10 @@
 version: '3'
 
 services:
-  poetry:
-    image: poetry
-    container_name: poetry
-    hostname: poetry
+  christi-dev:
+    image: christi-dev
+    container_name: christi-dev
+    hostname: christi-dev
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile

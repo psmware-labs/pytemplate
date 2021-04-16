@@ -15,9 +15,9 @@
 // GNU Affero General Public License for more details.
 
 {
-	"name": "Poetry Testing",
+	"name": "Christi's Python Den",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "poetry",
+	"service": "christi-dev",
 	"workspaceFolder": "/app",
 
 	// Set *default* container specific settings.json values on container create.
