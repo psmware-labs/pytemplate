@@ -41,8 +41,8 @@ COPY ./.devcontainer/.zshrc  /home/$USERNAME/
 
 RUN echo "===> Installing Python Packages tools... "
 RUN /home/$USERNAME/.poetry/bin/poetry config virtualenvs.create false
-COPY ./pyproject.toml.base /app/pyproject.toml
-COPY ./poetry.lock.base /app/poetry.lock
+COPY ./pyproject.toml /app/pyproject.toml
+COPY ./poetry.lock /app/poetry.lock
 RUN /home/$USERNAME/.poetry/bin/poetry install
 
 # Setting up user access
