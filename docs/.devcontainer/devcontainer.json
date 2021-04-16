@@ -1,0 +1,24 @@
+{
+	"name": "NAAT Docs",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "naat-docs",
+	"workspaceFolder": "/app",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/zsh",
+		"yaml.format.singleQuote": true,
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"hookyqr.beautify",
+		"davidanson.vscode-markdownlint",
+		"christian-kohler.path-intellisense",
+		"redhat.vscode-yaml",
+		"formulahendry.auto-rename-tag",
+		"p1c2u.docker-compose",
+	],
+	"remoteUser": "vscode",
+	"postCreateCommand": "make",
+}

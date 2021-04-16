@@ -1,0 +1,17 @@
+title: DevOps 201 - Documentation
+email: pmclean@vso-inc.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Architectural documentation for the DevOps 201 class
+
+readme_index:
+  with_frontmatter: true
+
+exclude:
+  - Makefile
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
