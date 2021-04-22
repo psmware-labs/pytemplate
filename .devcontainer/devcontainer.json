@@ -65,6 +65,5 @@
 		"hbenl.vscode-test-explorer",
 		"littlefoxteam.vscode-python-test-adapter"
 	],
-	"remoteUser": "vscode",
-	"postCreateCommand": "sh ./.devcontainer/.post.sh"
+	"remoteUser": "vscode"
 }
